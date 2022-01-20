@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vue Mini Project</title>
+</head>
+<body>
+
+    <!-- everything must be inside this div. as it is the one mounted in app.js-->
+    <div id="app">
+
+
+        <h1>{{firstName}} {{lastName}} </h1>
+        <h3>Email: {{email}}</h3>
+
+        <p>Hi, my name is {{firstName}} {{lastName}} and I made a random user generator.</p>
+
+        <!-- IDEA: HAVE A BUTTON THAT GETS USER DATA FROM API, THE STUFF IN CONSOLE. -->
+        <!-- IDEA: GENERATE RPG FANTASY CHAR. WITH STATS. -->
+
+        <!-- <p>Oh, you haven't heard of <i>LegoWars</i>? Here's a picture of my Avatar:</p>
+        <img v-bind:src="picture" v-bind:alt="`$
+        {firstName} ${lastName}`" >
+        <p>Well, what I can say about myself? I'm a <b>{{gender}}</b> beef cake.</p>
+        <p>Well, what I can say about myself? I'm a <b>{{gender}}</b> beef cake.</p> -->
+
+
+        <!-- within an attrib, u must use v-bind -->
+        <img :class="gender" v-bind:src="picture" v-bind:alt="`$
+        {firstName} ${lastName}`" >
+
+        <button v-on:click="getUser()"
+        :class="gender">Get Random User</button>
+
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/vue@3.0.5"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
